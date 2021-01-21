@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+
+    
+    <nav class="navbar bbackground">
+        <ul class="nav-list ">
+            <div class="logo"><img src="watch.jpg" alt="logo"></div>
+            <li><a href='/home'>HOME</a></li>
+            <li><a href='/about'>ABOUT</a></li>
+            <li><a href='/sign'>SIGN IN</a></li>
+            <li><a href='/contact'>CONTACT</a></li>
+
+
+
+        </ul>
+       <div class="rightnav">
+            <input type="text name="search" id="search">
+            <button class="btn btn-sm">search</button>
+        </div>
+    </nav>
     <section >
         <div class="container">
             
@@ -95,6 +113,8 @@
               
             
            }
+
+
            
             
 
@@ -201,6 +221,88 @@
       
 
           
+        
+        .navbar{
+        
+            display: flex;
+            align-items: centre;
+            justify-content: center;
+            position: sticky;
+            top:0;
+            cursor: pointer;
+            
+        }
+        .nav-list{
+            width: 50%;
+            
+            display:flex;
+            align-items: center;
+            
+            
+        }
+        
+        
+        .nav-list li{
+                   list-style: none;
+                   
+                   padding: 26px 30px;
+                   
+        }
+        .nav-list li a{
+            text-decoration: none;
+            color:white;
+        
+        }
+        .nav-list li a:hover {
+            text-decoration: underline;
+            color:grey;
+        
+        }
+        
+        .nav-list li a:active {
+            text-decoration: underline;
+            color:grey;
+        
+        }
+        
+        .rightnav{
+            
+            width: 50%;
+            
+            
+            text-align: right;
+        }
+        .logo{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            
+        }
+        .logo img{
+            width:50%;
+        }
+        
+        
+        #search{
+            padding: 5px;
+            border:2px solid grey;
+        }
+        .background{
+            background: rgba(0,0,0,0.7) url("mypic.jpg");
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+        .bbackground{
+            background: rgba(0,0,0,0.7) url("watch.jpg");
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+        
+       .ab{
+              padding: 30px;
+       }
 
 
     </style>

@@ -1,33 +1,44 @@
 
 const path=require("path");
+const hbs=require("hbs");
 
 const express =require("express");
 const app=express();
 
-const port =process.env.PORT
-const staticpath = path.join(__dirname,"/public");
+const port =3000 //process.env.PORT
+const staticpath = path.join(__dirname,"/template");
+const parpath = path.join(__dirname,"/template/partials");
 
-//app.set("view engine","hbs");
+
+
+ app.set("view engine","hbs");
+ app.set('views',staticpath);
+ hbs.registerPartials(parpath);
 
 app.use(express.static(staticpath));
+
+app.get("/home",(req,res)=>{
+
+   res.render("indexx");
+});
+
 app.get("/",(req,res)=>{
 
- //   res.render("indexx");
-});
-
+    res.render("indexx");
+ });
 app.get("/about",(req,res)=>{
 
-    res.end("ok");
+    res.render("about");
 });
 
-app.get("/page",(req,res)=>{
+app.get("/sign",(req,res)=>{
 
-    res.end("ok");
+    res.render("sign");
 });
 
-app.get("/con",(req,res)=>{
+app.get("/contact",(req,res)=>{
 
-    res.end("ok");
+    res.render("contact");
 });
 
 app.listen(port,()=>{
