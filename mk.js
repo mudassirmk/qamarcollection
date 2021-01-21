@@ -5,7 +5,7 @@ const hbs=require("hbs");
 const express =require("express");
 const app=express();
 
-const port =3000 //process.env.PORT
+const port =process.env.PORT //3000
 const staticpath = path.join(__dirname,"/template");
 const parpath = path.join(__dirname,"/template/partials");
 
